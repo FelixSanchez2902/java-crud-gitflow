@@ -80,14 +80,14 @@ public class Main {
     }
 
     private static void deleteUser() {
-        System.out.println("\n-- Eliminar usuario --");
+        System.out.println("\n🗑 Eliminar usuario");
         int id = readInt("ID del usuario a eliminar: ");
 
         boolean deleted = userService.deleteUser(id);
         if (deleted) {
-            System.out.println("Usuario eliminado correctamente.");
+            System.out.println("✔ Usuario con ID " + id + " fue eliminado correctamente 🗑");
         } else {
-            System.out.println("No se encontró un usuario con ese ID.");
+            System.out.println("⚠ No se encontró un usuario con ese ID. Verifica e intenta de nuevo.");
         }
     }
 
