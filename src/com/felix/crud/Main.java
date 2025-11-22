@@ -56,10 +56,13 @@ public class Main {
     private static void listUsers() {
         System.out.println("\n📋 Lista de usuarios registrados:");
         List<User> users = userService.getAllUsers();
+
         if (users.isEmpty()) {
-            System.out.println("No hay usuarios registrados.");
+            System.out.println("⚠ No hay usuarios registrados.");
         } else {
             users.forEach(System.out::println);
+            System.out.println("\n📊 Total de usuarios registrados: " + users.size());
+            System.out.println("✅ Fin del listado de usuarios.");
         }
     }
 
