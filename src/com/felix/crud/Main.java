@@ -49,7 +49,8 @@ public class Main {
         String email = scanner.nextLine();
 
         var user = userService.createUser(name, email);
-        System.out.println("Usuario creado: " + user);
+        System.out.println("✔ Usuario creado exitosamente: " + user);
+
     }
 
     private static void listUsers() {
