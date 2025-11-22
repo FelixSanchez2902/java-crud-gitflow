@@ -49,13 +49,11 @@ public class Main {
         String email = scanner.nextLine();
 
         var user = userService.createUser(name, email);
-        System.out.println("✔ Usuario creado exitosamente: " + user);
-
+        System.out.println("Usuario creado: " + user);
     }
 
     private static void listUsers() {
         System.out.println("\n📋 Lista de usuarios registrados:");
-
         List<User> users = userService.getAllUsers();
         if (users.isEmpty()) {
             System.out.println("No hay usuarios registrados.");
