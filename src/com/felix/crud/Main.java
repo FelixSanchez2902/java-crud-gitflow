@@ -49,21 +49,21 @@ public class Main {
         String email = scanner.nextLine();
 
         var user = userService.createUser(name, email);
-        System.out.println("Usuario creado: " + user);
+        System.out.println("✔ Usuario creado exitosamente: " + user);
     }
 
     private static void listUsers() {
-        System.out.println("\n-- Listar usuarios --");
+        System.out.println("\n📋 Lista de usuarios registrados:");
         List<User> users = userService.getAllUsers();
         if (users.isEmpty()) {
-            System.out.println("No hay usuarios registrados.");
+            System.out.println("⚠ No hay usuarios registrados.");
         } else {
-            users.forEach(System.out::println);
+            users.forEach(u -> System.out.println("🔸 " + u));
         }
     }
 
     private static void updateUser() {
-        System.out.println("\n-- Actualizar usuario --");
+        System.out.println("\n✏️ Actualizar usuario");
         int id = readInt("ID del usuario a actualizar: ");
         System.out.print("Nuevo nombre: ");
         String name = scanner.nextLine();
@@ -72,21 +72,21 @@ public class Main {
 
         boolean updated = userService.updateUser(id, name, email);
         if (updated) {
-            System.out.println("Usuario actualizado correctamente.");
+            System.out.println("✔ Usuario actualizado correctamente.");
         } else {
-            System.out.println("No se encontró un usuario con ese ID.");
+            System.out.println("⚠ No se encontró un usuario con ese ID.");
         }
     }
 
     private static void deleteUser() {
-        System.out.println("\n-- Eliminar usuario --");
+        System.out.println("\n🗑 Eliminar usuario");
         int id = readInt("ID del usuario a eliminar: ");
 
         boolean deleted = userService.deleteUser(id);
         if (deleted) {
-            System.out.println("Usuario eliminado correctamente.");
+            System.out.println("✔ Usuario eliminado correctamente.");
         } else {
-            System.out.println("No se encontró un usuario con ese ID.");
+            System.out.println("⚠ No se encontró un usuario con ese ID.");
         }
     }
 
