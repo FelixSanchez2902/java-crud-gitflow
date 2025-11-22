@@ -55,7 +55,6 @@ public class Main {
 
     private static void listUsers() {
         System.out.println("\n📋 Lista de usuarios registrados:");
-
         List<User> users = userService.getAllUsers();
         if (users.isEmpty()) {
             System.out.println("No hay usuarios registrados.");
