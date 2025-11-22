@@ -72,9 +72,10 @@ public class Main {
 
         boolean updated = userService.updateUser(id, name, email);
         if (updated) {
-            System.out.println("✔ Usuario actualizado correctamente.");
+            System.out.println("✔ Usuario actualizado correctamente ✅");
+            System.out.println("ℹ Recuerda verificar los nuevos datos en la opción 'Listar usuarios'.");
         } else {
-            System.out.println("⚠ No se encontró un usuario con ese ID.");
+            System.out.println("⚠ No se encontró un usuario con ese ID. Verifica el ID ingresado e inténtalo de nuevo.");
         }
     }
 
